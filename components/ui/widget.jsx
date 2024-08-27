@@ -15,8 +15,8 @@ function Widget({ widget, categoryId }) {
     switch (widget.type) {
       case 'pie':
         return (
-          <div className="flex flex-col md:flex-row items-center md:gap-4 gap-3 w-full h-full">
-            <div className="flex-grow md:w-2/3 h-52">
+          <div className="flex md:flex-col flex-col lg:flex-row items-center md:gap-4 gap-3 w-full h-full">
+            <div className="flex-grow w-full md:w-2/3 h-52">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -35,7 +35,7 @@ function Widget({ widget, categoryId }) {
                 </PieChart>
               </ResponsiveContainer>
             </div>
-            <ul className='mt-4 mx-auto md:mt-0 grid grid-cols-2 md:grid-cols-1 md: gap-2 w-full md:w-1/2'>
+            <ul className='mt-4  md:mt-0 grid grid-cols-2 gap-3 lg:grid-cols-1 xl:grid-cols-1 md:gap-2 w-full lg:w-1/2 '>
               {widget?.graph?.categories.map((chart, index) => (
                 <li key={index} className="flex items-center gap-x-2">
                   <span className="h-4 w-4 border border-slate-950 rounded-sm" style={{ backgroundColor: chart.color }} />
@@ -48,7 +48,7 @@ function Widget({ widget, categoryId }) {
       case 'bar':
         return (
           <div className="flex flex-col  items-center md:gap-4 gap-6 w-full h-full">
-            <div className="flex-grow md:w-full h-52 flex flex-col items-center justify-evenly">
+            <div className="flex-grow w-full h-52 flex flex-col items-center justify-evenly">
               <span className="text-xs font-semibold">{widget.graph.total} <span className=" font-normal">Total vulnerabilities</span></span>
               <div className="w-full  h-full mt-2">
                 <ResponsiveContainer width="100%" height="100%" >
