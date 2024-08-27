@@ -9,12 +9,9 @@ function AddWidgetCard() {
   const modal=useModal();
   return (
     <>
-    <Card className="relative shadow-xl w-full h-full ">
-      
-      <CardHeader>
-      </CardHeader>
-      <CardContent>
-      <div className="w-full grid place-items-center  h-52 ">
+    <Card className="relative shadow-xl flex  items-center justify-center w-full h-full">
+      <CardContent className="h-52 w-full ">
+      <div className="w-full h-full items-center justify-center flex">
       <Button onClick={modal.onOpen} variant="default" className="flex gap-x-2 items-center">
       <span>Add Widget</span>
       <Plus className="h-4 w-4 text-gray-900" />
