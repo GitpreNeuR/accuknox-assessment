@@ -13,7 +13,7 @@ function Header({onSearch}) {
 
   return (
     <nav className="w-full shadow-xl fixed top-0 bg-white p-2 z-50">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between px-3 ">
         
 
         <h1>
